@@ -18,7 +18,7 @@ services:
       - static:/backend_static
       - media:/media
     ports:
-      - 8000:8000
+      - 8001:9000
   frontend:
     image: flyshy/kittygram_frontend
     env_file: .env
