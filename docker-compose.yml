@@ -17,8 +17,6 @@ services:
     volumes:
       - static:/backend_static
       - media:/media
-    ports:
-      - 8001:9000
   frontend:
     image: flyshy/kittygram_frontend
     env_file: .env
