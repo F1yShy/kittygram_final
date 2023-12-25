@@ -9,7 +9,7 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY", default="prompt")
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://kittygramme.gotdns.ch/"]
 
