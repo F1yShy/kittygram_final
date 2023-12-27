@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", default="prompt")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kittygramme.gotdns.ch', '158.160.0.95', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -98,9 +98,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = "/static/"
-
-STATIC_ROOT = BASE_DIR / "collected_static"
+STATIC_URL = '/static_backend/'
+STATIC_ROOT = BASE_DIR / 'static_backend'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "app" / "media"
