@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", default="prompt")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["kittygramme.gotdns.ch", "158.160.0.95", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -102,7 +102,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "collected_static/"
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "app" / "media"
+MEDIA_ROOT = "/media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
