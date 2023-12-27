@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", default="prompt")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["kittygramme.gotdns.ch", "158.160.0.95", "127.0.0.1", "localhost"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
