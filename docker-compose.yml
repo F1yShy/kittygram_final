@@ -11,25 +11,26 @@ services:
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
+
   backend:
-    image: flyshy/kittygram_backend
+    build: ./backend/
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/media
+      - media:/app/media
+
   frontend:
-    image: flyshy/kittygram_frontend
     env_file: .env
-    command: cp -r /app/build/. /static/
+    build: ./frontend/
+    command: cp -r /app/build/. /frontend_static/    
     volumes:
-      - static:/static
+      - static:/frontend_static
+    
   gateway:
-    image: flyshy/kittygram_gateway
+    build: ./nginx/
     env_file: .env
     volumes:
-      - static:/static
-      - media:/media
+      - static:/static/
+      - media:/app/media
     ports:
       - 9000:80
-    depends_on:
-      - backend
