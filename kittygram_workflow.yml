@@ -164,4 +164,4 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           Выполнен деплой проекта ${{ github.repository }} в ветке ${{ github.ref_name }} пользователем ${{ github.actor }}.
-          Сообщение коммита ${{ github.event.head_commit.message }}.
+          Сообщение коммита: "${{ github.event.head_commit.message }}".
