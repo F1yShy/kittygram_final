@@ -10,7 +10,7 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY", default=get_random_secret_key())
 
-DEBUG = os.getenv("DEBUG", default=False).lower() == "true"
+DEBUG = bool(os.getenv("DEBUG", default=False).lower())
 
 ALLOWED_HOSTS = os.getenv(
     "ALLOWED_HOSTS", default="127.0.0.1,localhost"
